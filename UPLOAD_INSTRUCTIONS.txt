@@ -1,0 +1,48 @@
+UPLOAD THIS WEBSITE TO GITHUB ROOT
+==================================
+
+1. In repository KaitoChae/Labskchaerun, delete the old "docs" folder and README.md if you want a clean repository.
+2. Upload EVERYTHING from this folder directly to the repository root.
+   After upload, GitHub must show index.html immediately in the main file list.
+
+Correct structure:
+Labskchaerun/
+  index.html
+  styles.css
+  script.js
+  translations.js
+  requirements.txt
+  assets/
+  data/
+  scripts/
+
+Do NOT put these files inside another folder such as docs/ or V12/.
+
+3. GitHub Pages setting:
+   Settings > Pages > Build and deployment
+   Source: Deploy from a branch
+   Branch: main
+   Folder: /(root)
+   Save
+
+4. Website URL:
+   https://kaitochae.github.io/Labskchaerun/
+
+AUTOMATIC PUBLICATION UPDATES
+=============================
+The website itself does NOT require a .github folder.
+For scheduled publication updates, GitHub Actions does require a workflow under .github/workflows.
+If uploading a hidden .github folder is difficult, do this in GitHub:
+
+Actions > New workflow > Set up a workflow yourself
+Delete the sample content, then copy all content from:
+WORKFLOW_TO_PASTE_IN_GITHUB_ACTIONS.yml
+into the editor and save it as:
+.github/workflows/update-research-data.yml
+
+GitHub creates the hidden .github/workflows folders for you automatically.
+
+Optional repository secrets:
+SERPAPI_KEY   = best Google Scholar reliability
+DEEPL_API_KEY = reliable automatic title translations
+JCR_JSON_URL  = licensed/verified JIF feed if available
